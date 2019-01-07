@@ -1,0 +1,1 @@
+buildinstaller.cmd "C:\Program Files (x86)\NSIS\makensis.exe" "output" "D:\Development\OpenImageViewer" "D:\Development\OpenImageViewer\Bin\x64\Release"
