@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <?define SourceDir = "..\..\OIV-0.15RC2-Win32x64VC14.1" ?>
+</Include>
