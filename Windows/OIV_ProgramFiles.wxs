@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="CB585D18-AB19-4E1E-B356-FA1C8A2026E1" Name="Open Image Viewer" Language="1033" Version="0.0.1.16" Manufacturer="OIV" UpgradeCode="C16E0BCE-9B7A-44F1-897C-DBAD4C577CF3">
+        <Package Description="Open Image Viewer" Comments="Probably the fastest viewer on earth and maybe even in the galaxy" InstallerVersion="200" Compressed="yes" />
+        <Media Id="1" Cabinet="oiv.cab" EmbedCab="yes" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="OIV_Folder" Name="Open Image Viewer">
+                    <Component Id="FREEIMAGE.DLL" DiskId="1" Guid="5F7B78A5-306E-478F-A553-1EB0064A4A4D">
+                        <File Id="FREEIMAGE.DLL" Name="FreeImage.dll" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\FreeImage.dll" />
+                    </Component>
+                    <Component Id="LIBPNG16.DLL" DiskId="1" Guid="A663D60C-989C-4F07-8827-4082DD498020">
+                        <File Id="LIBPNG16.DLL" Name="libpng16.dll" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\libpng16.dll" />
+                    </Component>
+                    <Component Id="OIV.DLL" DiskId="1" Guid="7E2FDCE7-EF3C-4538-BA6F-C788320095AD">
+                        <File Id="OIV.DLL" Name="oiv.dll" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\oiv.dll" />
+                    </Component>
+                    <Component Id="OIVIEWER.EXE" DiskId="1" Guid="FB53BAB3-CA21-4BE0-9359-0CAD08636C71">
+                        <File Id="OIVIEWER.EXE" Name="OIViewer.exe" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\OIViewer.exe">
+                            <Shortcut Id="desktopShortcut" Directory="DesktopFolder" Name="Open Image Viewer" WorkingDirectory="INSTALLDIR" Advertise="yes" Icon="DesktopIcon.exe" IconIndex="0" />
+                            <Shortcut Id="ExeShortcut" Directory="ProgramMenuDir" Name="Open Image Viewer" Advertise="yes" Icon="StartMenuIcon.exe" IconIndex="0" />
+                        </File>
+                    </Component>
+                    <Component Id="TURBOJPEG.DLL" DiskId="1" Guid="4E1D3052-ABE2-4499-BF12-6ABDA23EF381">
+                        <File Id="TURBOJPEG.DLL" Name="turbojpeg.dll" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\turbojpeg.dll" />
+                    </Component>
+                    <Directory Id="RESOURCES" Name="Resources">
+                        <Directory Id="CURSORS" Name="Cursors">
+                            <Component Id="ARROW_C.CUR" DiskId="1" Guid="E1C367E5-FE6F-48D5-A4EE-0C1C91C9B358">
+                                <File Id="ARROW_C.CUR" Name="arrow-C.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-C.cur" />
+                            </Component>
+                            <Component Id="ARROW_E.CUR" DiskId="1" Guid="37652AB5-D485-41FA-AE6E-4CA9E47AA8B2">
+                                <File Id="ARROW_E.CUR" Name="arrow-E.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-E.cur" />
+                            </Component>
+                            <Component Id="ARROW_N.CUR" DiskId="1" Guid="014286F9-F791-460D-843F-92D9C2049B6E">
+                                <File Id="ARROW_N.CUR" Name="arrow-N.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-N.cur" />
+                            </Component>
+                            <Component Id="ARROW_NE.CUR" DiskId="1" Guid="745F2155-3741-43C6-95E5-87502619CCBA">
+                                <File Id="ARROW_NE.CUR" Name="arrow-NE.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-NE.cur" />
+                            </Component>
+                            <Component Id="ARROW_NW.CUR" DiskId="1" Guid="BFECEB8F-3E52-443C-AAFA-7EA986EA8BB8">
+                                <File Id="ARROW_NW.CUR" Name="arrow-NW.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-NW.cur" />
+                            </Component>
+                            <Component Id="ARROW_S.CUR" DiskId="1" Guid="4C9030A9-3BBE-4287-B5AD-E373481216B8">
+                                <File Id="ARROW_S.CUR" Name="arrow-S.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-S.cur" />
+                            </Component>
+                            <Component Id="ARROW_SE.CUR" DiskId="1" Guid="E5F87F3A-7B10-470E-8E97-B72851088F79">
+                                <File Id="ARROW_SE.CUR" Name="arrow-SE.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-SE.cur" />
+                            </Component>
+                            <Component Id="ARROW_SW.CUR" DiskId="1" Guid="4358CCCE-CDBF-4617-A51E-33A9A6FB2E71">
+                                <File Id="ARROW_SW.CUR" Name="arrow-SW.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-SW.cur" />
+                            </Component>
+                            <Component Id="ARROW_W.CUR" DiskId="1" Guid="31EF641D-7B90-4983-9C63-83098BC0B57D">
+                                <File Id="ARROW_W.CUR" Name="arrow-W.cur" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\Cursors\arrow-W.cur" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="PROGRAMS" Name="programs">
+                            <Component Id="COLORCORRECTION.SHADER" DiskId="1" Guid="FC440842-0F90-4DB0-99A9-E3F141687154">
+                                <File Id="COLORCORRECTION.SHADER" Name="colorCorrection.shader" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\programs\colorCorrection.shader" />
+                            </Component>
+                            <Component Id="IMAGECOMMON.SHADER" DiskId="1" Guid="D38C23C1-B954-4E7C-A020-03B2CDD6024D">
+                                <File Id="IMAGECOMMON.SHADER" Name="imagecommon.shader" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\programs\imagecommon.shader" />
+                            </Component>
+                            <Component Id="QUAD_FP.SHADER" DiskId="1" Guid="D7A60A6D-9020-4C1B-88A3-1F59B9FE6848">
+                                <File Id="QUAD_FP.SHADER" Name="quad_fp.shader" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\programs\quad_fp.shader" />
+                            </Component>
+                            <Component Id="QUAD_SELECTION_FP.SHADER" DiskId="1" Guid="6400B722-D2A2-4F54-98AA-FC5FA2164BDC">
+                                <File Id="QUAD_SELECTION_FP.SHADER" Name="quad_selection_fp.shader" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\programs\quad_selection_fp.shader" />
+                            </Component>
+                            <Component Id="QUAD_SIMPLE_FP.SHADER" DiskId="1" Guid="2565ED06-3BC9-4660-AA10-CF1D28FD5D99">
+                                <File Id="QUAD_SIMPLE_FP.SHADER" Name="quad_simple_fp.shader" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\programs\quad_simple_fp.shader" />
+                            </Component>
+                            <Component Id="QUAD_VP.SHADER" DiskId="1" Guid="9D2DC8C9-7DA9-4623-8F58-B2D8EE516F38">
+                                <File Id="QUAD_VP.SHADER" Name="quad_vp.shader" Source="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\Resources\programs\quad_vp.shader" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="DesktopFolder" />
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ProgramMenuDir" Name="Open Image Viewer">
+                    <Component Id="StartMenuShortcuts" Guid="99C59691-F493-4DD8-8973-F500DA05D528">
+                        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+                        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" />
+                        <Shortcut Id="UninstallProduct" Name="Uninstall Open Image Viewer" Description="Uninstalls the Open Image Viewer application" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="FREEIMAGE.DLL" />
+            <ComponentRef Id="LIBPNG16.DLL" />
+            <ComponentRef Id="OIV.DLL" />
+            <ComponentRef Id="OIVIEWER.EXE" />
+            <ComponentRef Id="TURBOJPEG.DLL" />
+            <ComponentRef Id="ARROW_C.CUR" />
+            <ComponentRef Id="ARROW_E.CUR" />
+            <ComponentRef Id="ARROW_N.CUR" />
+            <ComponentRef Id="ARROW_NE.CUR" />
+            <ComponentRef Id="ARROW_NW.CUR" />
+            <ComponentRef Id="ARROW_S.CUR" />
+            <ComponentRef Id="ARROW_SE.CUR" />
+            <ComponentRef Id="ARROW_SW.CUR" />
+            <ComponentRef Id="ARROW_W.CUR" />
+            <ComponentRef Id="COLORCORRECTION.SHADER" />
+            <ComponentRef Id="IMAGECOMMON.SHADER" />
+            <ComponentRef Id="QUAD_FP.SHADER" />
+            <ComponentRef Id="QUAD_SELECTION_FP.SHADER" />
+            <ComponentRef Id="QUAD_SIMPLE_FP.SHADER" />
+            <ComponentRef Id="QUAD_VP.SHADER" />
+            <ComponentRef Id="StartMenuShortcuts" />
+        </Feature>
+        <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+        <UI />
+        <Property Id="WIXUI_INSTALLDIR" Value="OIV_Folder" />
+        <UIRef Id="WixUI_InstallDir" />
+        <Icon Id="DesktopIcon.exe" SourceFile="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\OIViewer.exe" />
+        <Icon Id="StartMenuIcon.exe" SourceFile="D:\Ohad\OpenSource Contribuations\OIV\OIV-0.15RC2-Win32x64VC14.1\OIViewer.exe" />
+    </Product>
+</Wix>
